@@ -8,7 +8,6 @@ app.use(cors({
     origin: "*",
     methods: ["GET", "POST"],
 }));
-app.options('*', cors());
 const PORT = process.env.PORT || 3000;
 
 // ===== NODE CLASS =====
