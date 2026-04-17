@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+console.log("CORS enabled version");
+
 app.use(cors());
 const PORT = process.env.PORT || 3000;
 
