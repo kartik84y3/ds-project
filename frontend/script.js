@@ -10,7 +10,7 @@ function operate(op) {
 
     // MULTIPLE INSERT
     if (op == 1 && multi) {
-        let values = multi.split(",");
+        let values = multi.trim().split(/\s+/);
 
         values.forEach(v => {
             let url = `${BASE_URL}/operate?type=${type}&op=1&value=${v.trim()}`;
