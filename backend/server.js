@@ -28,7 +28,7 @@ class Stack {
         let n = new Node(val);
         n.next = this.top;
         this.top = n;
-        return "Inserted into Stack";
+        return `Inserted ${value} into Stack`;
     }
 
     pop() {
@@ -63,7 +63,7 @@ class Queue {
             this.rear.next = n;
             this.rear = n;
         }
-        return "Inserted into Queue";
+        return `Inserted ${value} into Queue`;
     }
 
     dequeue() {
@@ -95,12 +95,12 @@ class LinkedList {
         let n = new Node(val);
         if (!this.head) {
             this.head = n;
-            return "Inserted into List";
+            return `Inserted ${value} into Linked List`;
         }
         let temp = this.head;
         while (temp.next) temp = temp.next;
         temp.next = n;
-        return "Inserted into List";
+        return `Inserted ${value} into Linked List`;
     }
 
     deleteAtPos(pos) {

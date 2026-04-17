@@ -2,30 +2,83 @@
 <html>
 <head>
     <title>Data Structures App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2>Data Structures Operations</h2>
+<div class="container">
+    <h2>Data Structures</h2>
 
-<label>Select Data Structure:</label>
-<select id="type">
-    <option value="1">Stack</option>
-    <option value="2">Queue</option>
-    <option value="3">Linked List</option>
-</select>
+    <select id="type">
+        <option value="1">Stack</option>
+        <option value="2">Queue</option>
+        <option value="3">Linked List</option>
+    </select>
 
-<br><br>
+    <input type="number" id="value" placeholder="Enter value">
+    <input type="text" id="multiValues" placeholder="Enter multiple values (e.g. 1,2,3)">
+    <input type="number" id="position" placeholder="Position (for delete)">
 
-<input type="number" id="value" placeholder="Enter value">
-<input type="number" id="position" placeholder="Position (for list delete)">
+    <div>
+        <button onclick="operate(1)">Insert</button>
+        <button onclick="operate(2)">Delete</button>
+        <button onclick="operate(3)">Print</button>
+    </div>
 
-<br><br>
-
-<button onclick="operate(1)">Insert</button>
-<button onclick="operate(2)">Delete</button>
-<button onclick="operate(3)">Print</button>
-
-<h3 id="result"></h3>
+    <div id="result"></div>
+</div>
 
 <script src="script.js"></script>
 
