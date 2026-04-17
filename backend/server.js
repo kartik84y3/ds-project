@@ -4,7 +4,11 @@ const app = express();
 
 console.log("CORS enabled version");
 
-app.use(cors());
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST"],
+}));
+app.options('*', cors());
 const PORT = process.env.PORT || 3000;
 
 // ===== NODE CLASS =====
