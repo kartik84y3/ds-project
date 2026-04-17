@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Structures App</title>
+</head>
+<body>
+
+<h2>Data Structures Operations</h2>
+
+<label>Select Data Structure:</label>
+<select id="type">
+    <option value="1">Stack</option>
+    <option value="2">Queue</option>
+    <option value="3">Linked List</option>
+</select>
+
+<br><br>
+
+<input type="number" id="value" placeholder="Enter value">
+<input type="number" id="position" placeholder="Position (for list delete)">
+
+<br><br>
+
+<button onclick="operate(1)">Insert</button>
+<button onclick="operate(2)">Delete</button>
+<button onclick="operate(3)">Print</button>
+
+<h3 id="result"></h3>
+
+<script src="script.js"></script>
+
+</body>
+</html>
