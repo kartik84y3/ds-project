@@ -24,16 +24,38 @@ function operate(op) {
 
         return;
     }
+function updateVisual(type, data) {
+    let visual = document.getElementById("visual");
 
+    if (!data) return;
+
+    let items = data.trim().split(" ");
+
+    visual.innerHTML = "";
+
+    items.forEach(val => {
+        if (val === "") return;
+
+        let div = document.createElement("div");
+        div.className = "block";   // uses CSS styling
+        div.innerText = val;
+
+        visual.appendChild(div);
+    });
+}
     // NORMAL OPERATION
     let url = `${BASE_URL}/operate?type=${type}&op=${op}&value=${value}&pos=${pos}`;
 
     document.getElementById("visual").innerHTML = "";
-    
+
     fetch(url)
         .then(res => res.text())
         .then(data => {
             document.getElementById("result").innerText = data;
+
+            if (op == 3) {  // only when PRINT is clicked
+                updateVisual(type, data);
+            }
         })
         .catch(() => {
             document.getElementById("result").innerText = "Error connecting to server";

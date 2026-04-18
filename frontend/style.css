@@ -1,0 +1,90 @@
+/* Page background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main card */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Result text */
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Visual container */
+#visual {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Blocks (stack/queue) */
+.block {
+    width: 80px;
+    padding: 10px;
+    margin: 5px;
+    background: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.block:hover {
+    transform: scale(1.1);
+}
