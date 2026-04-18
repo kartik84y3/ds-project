@@ -33,11 +33,17 @@ function updateVisual(type, data) {
 
     visual.innerHTML = "";
 
+    if (type == 2) {
+        visual.style.flexDirection = "row";
+    } else {
+        visual.style.flexDirection = "column-reverse";
+    }
+
     items.forEach(val => {
         if (val === "") return;
 
         let div = document.createElement("div");
-        div.className = "block";   // uses CSS styling
+        div.className = "block";
         div.innerText = val;
 
         visual.appendChild(div);

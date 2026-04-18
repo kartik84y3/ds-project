@@ -61,28 +61,32 @@
 <body>
 
 <div class="container">
-    <h2>Data Structures</h2>
 
-    <select id="type">
-        <option value="1">Stack</option>
-        <option value="2">Queue</option>
-        <option value="3">Linked List</option>
-    </select>
+    <h2>Data Structures Visualizer</h2>
 
-    <input type="number" id="value" placeholder="Enter the number of values you want to add">
+    <!-- CONTROLS -->
+    <div class="controls">
+        <select id="type">
+            <option value="1">Stack</option>
+            <option value="2">Queue</option>
+            <option value="3">Linked List</option>
+        </select>
 
-    <input type="text" id="multiValues" placeholder="Enter values (space separated e.g. 1 2 3)">
+        <input type="number" id="value" placeholder="Enter value">
+        <input type="text" id="multiValues" placeholder="Enter values (e.g. 1 2 3)">
+        <input type="number" id="position" placeholder="Position (for delete)">
 
-    <input type="number" id="position" placeholder="Position (for delete)">
-
-    <div>
-        <button onclick="operate(1)">Insert</button>
-        <button onclick="operate(2)">Delete</button>
-        <button onclick="operate(3)">Print</button>
+        <div class="buttons">
+            <button onclick="operate(1)">Insert</button>
+            <button onclick="operate(2)">Delete</button>
+            <button onclick="operate(3)">Print</button>
+        </div>
     </div>
 
     <div id="result"></div>
+
     <div id="visual"></div>
+
 </div>
 
 <script src="script.js"></script>
