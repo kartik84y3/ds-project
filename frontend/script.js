@@ -32,6 +32,10 @@ function operate(op) {
         .then(res => res.text())
         .then(data => {
             document.getElementById("result").innerText = data;
+
+            if (op == 3) {   // only for PRINT
+                updateVisual(type, data);
+            }
         })
         .catch(() => {
             document.getElementById("result").innerText = "Error connecting to server";
