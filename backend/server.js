@@ -28,7 +28,7 @@ class Stack {
         let n = new Node(val);
         n.next = this.top;
         this.top = n;
-        return `Inserted ${value} into Stack`;
+        return `Inserted ${val} into Stack`;
     }
 
     pop() {

@@ -1,6 +1,6 @@
 const BASE_URL = "https://ds-backend-vp3d.onrender.com";
 
-function operate(op) {
+async function operate(op) {
     let type = document.getElementById("type").value;
     let value = document.getElementById("value").value;
     let multi = document.getElementById("multiValues").value;
@@ -12,10 +12,10 @@ function operate(op) {
     if (op == 1 && multi) {
         let values = multi.trim().split(/\s+/);
 
-        values.forEach(v => {
+        for (let v of values) {
             let url = `${BASE_URL}/operate?type=${type}&op=1&value=${v.trim()}`;
-            requests.push(fetch(url).then(res => res.text()));
-        });
+            await fetch(url);
+        }
 
         Promise.all(requests).then(() => {
             document.getElementById("result").innerText =
