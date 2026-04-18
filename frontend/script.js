@@ -28,6 +28,8 @@ function operate(op) {
     // NORMAL OPERATION
     let url = `${BASE_URL}/operate?type=${type}&op=${op}&value=${value}&pos=${pos}`;
 
+    document.getElementById("visual").innerHTML = "";
+    
     fetch(url)
         .then(res => res.text())
         .then(data => {
