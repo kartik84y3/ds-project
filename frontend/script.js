@@ -33,13 +33,23 @@ function updateVisual(type, data) {
 
     visual.innerHTML = "";
 
-    if (type == 2) {
-        visual.style.flexDirection = "row";
-    } else {
-        visual.style.flexDirection = "column-reverse";
+    // STACK
+    if (type == 1) {
+        visual.style.flexDirection = "column";
+        items = items.reverse();  // ONLY stack
     }
 
-    items.forEach(val => {
+    // QUEUE
+    else if (type == 2) {
+        visual.style.flexDirection = "row";
+    }
+
+    // LINKED LIST
+    else {
+        visual.style.flexDirection = "column";
+    }
+
+    items.forEach((val, index) => {
         if (val === "") return;
 
         let div = document.createElement("div");
@@ -47,6 +57,13 @@ function updateVisual(type, data) {
         div.innerText = val;
 
         visual.appendChild(div);
+        if (type == 3 && index < items.length - 1) {
+            let arrow = document.createElement("div");
+            arrow.innerText = "↓";
+            arrow.style.fontSize = "20px";
+            arrow.style.margin = "5px";
+            visual.appendChild(arrow);
+        }
     });
 }
     // NORMAL OPERATION

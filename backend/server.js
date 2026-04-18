@@ -92,15 +92,22 @@ class LinkedList {
     }
 
     insert(val) {
-        let n = new Node(val);
+        let newNode = new Node(val);
+
         if (!this.head) {
-            this.head = n;
-            return `Inserted ${value} into Linked List`;
+            this.head = newNode;
+            return `Inserted ${val} into Linked List`;
         }
+
         let temp = this.head;
-        while (temp.next) temp = temp.next;
-        temp.next = n;
-        return `Inserted ${value} into Linked List`;
+
+        while (temp.next) {
+            temp = temp.next;
+        }
+
+        temp.next = newNode;
+
+        return `Inserted ${val} into Linked List`;
     }
 
     deleteAtPos(pos) {
