@@ -71,10 +71,17 @@
             <option value="2">Queue</option>
             <option value="3">Linked List</option>
         </select>
-
-        <input type="number" id="value" placeholder="Enter value">
+        
+        <select id="insertType">
+            <option value="end">Insert at End</option>
+            <option value="start">Insert at Start</option>
+            <option value="pos">Insert at Position</option>
+        </select>
+        
+        <input type="number" id="position" placeholder="Position ">
+        <input type="number" id="value" placeholder="Enter the number of nodes">
         <input type="text" id="multiValues" placeholder="Enter values (e.g. 1 2 3)">
-        <input type="number" id="position" placeholder="Position (for delete)">
+        
 
         <div class="buttons">
             <button onclick="operate(1)">Insert</button>

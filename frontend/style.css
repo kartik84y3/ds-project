@@ -93,3 +93,10 @@ button:hover {
 .block:hover {
     transform: scale(1.1);
 }
+#insertType {
+    display: none;
+}
+
+#position {
+    display: none;
+}

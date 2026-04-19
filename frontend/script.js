@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.getElementById("type").addEventListener("change", () => {
+        let type = document.getElementById("type").value;
+        let insertType = document.getElementById("insertType");
+
+        if (type == 3) {
+            insertType.style.display = "block";
+        } else {
+            insertType.style.display = "none";
+        }
+    });
+
+});
+document.getElementById("insertType").addEventListener("change", () => {
+    let insertType = document.getElementById("insertType").value;
+    let position = document.getElementById("position");
+
+    if (insertType === "pos") {
+        position.style.display = "block";
+    } else {
+        position.style.display = "none";
+    }
+});
+
 const BASE_URL = "https://ds-backend-vp3d.onrender.com";
 
 async function operate(op) {
@@ -56,8 +81,6 @@ function updateVisual(type, data) {
     if (type == 1) {
         visual.style.display = "flex";
         visual.style.flexDirection = "column";
-
-        items.reverse(); // 🔥 Fix stack (top at top)
 
         items.forEach((val, index) => {
             let div = document.createElement("div");
